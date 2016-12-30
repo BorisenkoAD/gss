@@ -5,16 +5,6 @@
 body {
   padding: 50px 0 0 0;
 }
-.panel {
-    position: absolute!important;
-    top: 60px;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: rgba(255,255,255,.75)!important;
-    z-index: 220;
-}
 a {
     color: #bde0ff;
     text-decoration: none;
