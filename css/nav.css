@@ -1,0 +1,85 @@
+/* цвет фона и рамки навигационного меню */
+.navmenu-default {
+    background-color: #00192d;
+    border-color: #000;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navmenu-default .navmenu-brand {
+    color: #fff;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navmenu-default .navmenu-brand:hover,
+.navmenu-default .navmenu-brand:focus {
+    color: #fff;
+}
+/* Цвет пунктов навигационного меню */
+.navmenu-default .navmenu-nav > li > a {
+    color: #fff;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navmenu-default .navmenu-nav > li > a:hover,
+.navmenu-default .navmenu-nav > li > a:focus {
+    color: #fff;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navmenu-default .navmenu-nav > .active > a, 
+.navmenu-default .navmenu-nav > .active > a:hover, 
+.navmenu-default .navmenu-nav > .active > a:focus {
+    color: #fff;
+    background-color: #00213b;
+}
+.navmenu-text {
+    color: #fff !important;	
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navmenu-default .navmenu-nav > .open > a, 
+.navmenu-default .navmenu-nav > .open > a:hover, 
+.navmenu-default .navmenu-nav > .open > a:focus {
+    color: #fff;
+    background-color: #00192d;
+}
+/* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+.navmenu-default .navmenu-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navmenu-default .navmenu-nav > .dropdown > a:hover .caret,
+.navmenu-default .navmenu-nav > .dropdown > a:focus .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+.navmenu-default .navmenu-nav > .open > a .caret, 
+.navmenu-default .navmenu-nav > .open > a:hover .caret, 
+.navmenu-default .navmenu-nav > .open > a:focus .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+ 
+@media (max-width: 767px) {
+/* Цвет пунктов меню в раскрывающихся списках */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+}

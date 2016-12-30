@@ -1,0 +1,270 @@
+﻿html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  padding: 50px 0 0 0;
+}
+.panel {
+    position: absolute!important;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: rgba(255,255,255,.75)!important;
+    z-index: 220;
+}
+a {
+    color: #bde0ff;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color: #bde0ff;
+    text-decoration: none;
+}
+.navmenu {
+  padding-top: 50px;
+}
+.navmenu-brand {
+    padding: 0px 15px;
+    margin: 0px 0;
+}
+.navbar {
+  display: block;
+  text-align: center;
+}
+.navbar-brand {
+  display: inline-block;
+  float: none;
+}
+.navbar-toggle {
+  position: absolute;
+  float: left;
+  margin-left: 15px;
+}
+.container {
+  max-width: 100%; 
+}
+@media (min-width: 1px) {
+  .navbar-toggle {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    padding: 0 0 0 200px;
+  }
+  .navmenu {
+    padding-top: 0;
+  }
+  .navbar {
+    display: none !important; /* для IE8 */
+  }
+}
+.btn-primary {
+    color: #fff;
+    background-color: #00213b;
+    border-color: #00213b;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #fff !important; 
+    background-color: #00213b !important;
+    border-color: #00213b!important;
+}
+.navmenu {
+width: 200px;
+}
+.navmenu-nav.dropdown-menu { position:relative; }
+.dropdown-backdrop { position: static; }
+
+.navigationText {
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	font-size: 24px;	 
+}
+
+.navigationText_small {
+	font-size: 16px !important;	 
+	text-align:center !important;
+}
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: #003a64; /* Цвет линии для остальных браузеров */
+    background-color: #003a64; /* Цвет линии для браузера Firefox и Opera */
+    height: 1px; /* Толщина линии */
+   }
+   
+   /*СТРАНИЦА INDEX*/  
+ .index_text {	
+	padding-top: 50px;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#fff;
+	text-align:left;
+/* 	position: relative;*/	
+	font-size: 40px;
+} 
+
+/* .footer {
+    position: absolute;
+	right: 0px;
+    bottom: 0;
+    width: 100%;
+	height: 60px;
+	background-color: #10161b;
+	color: #fff;
+	font-family: "MyriadProRegular" !important;
+	color:#fff;
+	text-align:left;
+	font-size: 14px;	
+} */
+
+  /*СТРАНИЦА ВАКАНСИИ*/
+.vacancy {
+	background-color: #fff;
+}
+
+.header_text {
+	padding-top: 50px;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;
+	text-align:left;
+/* 	position: relative;*/	
+	font-size: 24px;
+}
+.notice_text {
+	padding-top: 25px;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:center;
+/* 	position: relative;*/	
+	font-size: 16px;	
+}
+.vacancy_text a{
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:left;
+/* 	position: relative;*/	
+	font-size: 18px;	
+	underline: none;
+}
+/*СТРАНИЦА ПРОЕКТОВ*/
+.project_text{
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:justify;
+/* 	position: relative;*/	
+	font-size: 20px;	
+}
+/*СТРАНИЦА НАГРАДЫ*/
+
+/*СТРАНИЦА ПАРТНЕРЫ*/
+.partners_text{
+	padding-top: 10px;
+    padding-bottom: 10px;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:justify;
+/* 	position: relative;*/	
+	font-size: 16px;	
+}
+.partners_image{
+	padding-top: 12px;
+    padding-bottom: 10px;	
+}
+/*СТРАНИЦА О КОМПАНИИ*/
+.about_text{
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:justify;
+/* 	position: relative;*/	
+	font-size: 18px;	
+}
+/*СТРАНИЦА КОНТАКТЫ*/
+.contact {
+
+}
+.contact_maps {	
+	min-height: 610px;
+	/* Картинка, которая используются для splash */
+	/*  background-image:url(../img/map.png);  */
+	/* Масштабируем картинку с сохранением пропорций */
+  	background-size:cover;
+	background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;  
+	/* Запрещаем фоновому изображению прокручиваться, т.е. делаем его неподвижным */
+		background-attachment:fixed; 
+	position: relative;	
+}
+.contact_text {
+    margin-top: 10px;
+    margin-bottom: 10px;	
+    padding-top: 20px;
+    padding-bottom: 20px;
+	background-color: #fff;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:center;
+/* 	position: relative;*/	
+	font-size: 16px;	
+}
+/*СТРАНИЦА ОТЗЫВОВ*/
+.rewiews_text {
+		background-color: #fff;
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:justify;
+/* 	position: relative;*/	
+	font-size: 14px;	
+}
+.rewiews_text__name {
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:left;
+/* 	position: relative;*/	
+	font-size: 18px;	
+}
+.rewiews_text__date {
+	font-family: "MyriadProRegular" !important;
+	/* text-shadow: 1px 1px 2px #000; */
+	/* Цвет текста */
+	/* text-shadow: 1px 1px 2px #000; */
+	color:#000;	
+	text-align:left;
+/* 	position: relative;*/	
+	font-size: 18px;	
+}
