@@ -1,21 +1,33 @@
 <?php
 try 
-{
-/* $lastname = substr(htmlspecialchars(trim($_POST['lastname'])), 0, 100); */
+{		
 $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
 $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 30);
 $text = substr(htmlspecialchars(trim($_POST['text'])), 0, 1500);
 
-$message = "Имя: $name\nИмя: \nEmail: $email\nТекст: $text\n";
+$message = "Имя: $name\ \nEmail: $email\nТекст: $text\n";
 $subj = "Форма обратной связи с сайта gsst-spb.ru";
 $to = "info@gsst-spb.ru"; 
 $from="admin@gsst-spb.ru";
 $headers = "From: $from\nReply-To: $from\n";
-if (!mail($to, $subj, $message, $headers)){
-	throw new RuntimeException('Ваше сообщение не отправлено.');
-    }
-	throw new RuntimeException('Ваше сообщение отправлено.');
-} 
+
+if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']) {
+	$secret = '6LfuYRUUAAAAAAx7j_m1IFvzkvLHDIfj2H3sGGut';
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$response = $_POST['g-recaptcha-response'];
+	$rsp = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$ip");
+	$arr = json_decode($rsp, TRUE);
+	if($arr['success']){
+		
+		if (!mail($to, $subj, $message, $headers)){
+			throw new RuntimeException('Ваше сообщение не отправлено.');
+			}
+			throw new RuntimeException('Ваше сообщение отправлено.');
+		} 
+	}
+}
+
+
 catch (RuntimeException $e) {
 ?>
     <!DOCTYPE html>
