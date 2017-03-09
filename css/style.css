@@ -1,9 +1,16 @@
 ﻿html, body {
   position: relative;
   height: 100%;
+  font-family: "MyriadProSemiBold";
 }
 body {
   padding: 50px 0 0 0;
+}
+#msg {
+	font-family: "MyriadProItalic";
+	font-size: 35px;
+	color: #fff;
+	text-shadow: 1px 1px 2px black, 0 0 1em black;	
 }
 .panel  {
     position: absolute!important;
@@ -15,12 +22,44 @@ body {
     background-color: rgba(255,255,255,.75)!important;
     z-index: 220;
  }
+ .panel_on_vacancy {
+    position: absolute!important;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px auto;
+	width: 70%;
+	margin-right: 10%;
+    background-color: rgba(255,255,255,.75)!important;
+    z-index: 220;
+ }
+  .panel_all_pages {
+    position: absolute!important;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px auto;
+	width: 70%;
+	margin-right: 10%;
+    background-color: rgba(255,255,255,.75)!important;
+    z-index: 220;
+ }
 a {
-    color: #bde0ff;
+    color: ##337ab7;
     text-decoration: none;
 }
+.back {
+	color: #337ab7;
+	   text-decoration: none;
+}
 a:focus, a:hover {
-    color: #bde0ff;
+    color: ##337ab7;
+    text-decoration: none;
+}
+.back:focus, .back:hover {
+    color: #285e8c;
     text-decoration: none;
 }
 .navmenu {
@@ -71,8 +110,8 @@ a:focus, a:hover {
 .btn-primary:focus,
 .btn-primary:active {
     color: #fff !important; 
-    background-color: #00213b !important;
-    border-color: #00213b!important;
+    background-color: #002149 !important;
+    border-color: #002149!important;
 }
 .navmenu {
 width: 200px;
@@ -81,14 +120,15 @@ width: 200px;
 .dropdown-backdrop { position: static; }
 
 .navigationText {
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	font-size: 24px;	 
 }
 
 .navigationText_small {
-	font-size: 16px !important;	 
+	font-size: 17px !important;	 
 	text-align:center !important;
+/*	font-weight: bold;*/
 }
 hr {
     border: none; /* Убираем границу для браузера Firefox */
@@ -100,7 +140,7 @@ hr {
    /*СТРАНИЦА INDEX*/  
  .index_text {	
 	padding-top: 50px;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -118,7 +158,7 @@ hr {
 	height: 60px;
 	background-color: #10161b;
 	color: #fff;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	color:#fff;
 	text-align:left;
 	font-size: 14px;	
@@ -131,7 +171,7 @@ hr {
 
 .header_text {
 	padding-top: 50px;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -142,7 +182,7 @@ hr {
 }
 .notice_text {
 	padding-top: 25px;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -152,19 +192,19 @@ hr {
 	font-size: 16px;	
 }
 .vacancy_text a{
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
-	color:#000;	
+	/*color:#000;	*/
 	text-align:left;
 /* 	position: relative;*/	
-	font-size: 18px;	
+	font-size: 17px;	
 	underline: none;
 }
 /*СТРАНИЦА ПРОЕКТОВ*/
 .project_text{
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -179,7 +219,7 @@ hr {
 .partners_text{
 	padding-top: 10px;
     padding-bottom: 10px;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -194,7 +234,7 @@ hr {
 }
 /*СТРАНИЦА О КОМПАНИИ*/
 .about_text{
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -227,7 +267,7 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px;
 	background-color: #fff;
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -238,8 +278,8 @@ hr {
 }
 /*СТРАНИЦА ОТЗЫВОВ*/
 .rewiews_text {
-		background-color: #fff;
-	font-family: "MyriadProRegular" !important;
+	/*background-color: #fff;*/
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -249,7 +289,7 @@ hr {
 	font-size: 14px;	
 }
 .rewiews_text__name {
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -259,7 +299,7 @@ hr {
 	font-size: 18px;	
 }
 .rewiews_text__date {
-	font-family: "MyriadProRegular" !important;
+	font-family: "MyriadProSemiBold" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */

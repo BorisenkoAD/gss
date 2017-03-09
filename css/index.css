@@ -1,7 +1,7 @@
 body {
 padding-left: 200px;
 	/* Картинка, которая используются для splash */
-	background-image:url(../img/bg_index.png);
+	background-image:url(../img/bg_index.jpg);
 	/* Масштабируем картинку с сохранением пропорций */
   	background-size:cover;
 	background-position: center;

@@ -70,6 +70,13 @@
   <a class="navbar-brand" href="#">ГарантСпецСтрой</a>
 </div>	
 	<div class="container">
+		<div class="row">
+			<div class="col-sm-5"></div>			
+			<div class="col-sm-7" style="padding-top: 150px;">
+				<span id="msg"></span>
+			</div>
+		</div>
+	
 
 <!-- 		<section class="index">
  			<div class="owl-partners">
@@ -112,5 +119,34 @@
 	<script src="libs/owl-carousel/owl.carousel.js"></script>
 	<script src="js/myscripts.js" type="text/javascript"></script>	
 	<script>	$('.carousel').carousel() </script>
+	<script>
+		function nextMsg(i) {
+			if (messages.length == i) {
+				i = 0;
+			}
+			$('#msg').html(messages[i]).fadeIn(500).delay(3000).fadeOut(500, function() {
+				nextMsg(i + 1);
+			});
+		};
+
+		var messages = [
+			"Идеи представляют собой ключ к будущему",
+			"Каждому проекту - современное экономическое решение",
+			"ГарантСпецСтрой – качественные решения",
+			"У нас всегда есть свежие идеи",
+			"Отдаём все силы избранному делу",
+			"Доводим до совершенства, думая о мелочах",
+			"Проектируем, создаём, воплощаем",
+			"Требуем от себя невозможное – получаем максимум",
+			"Ваши идеи – наше решение",
+			"Для нас нет недостижимых целей",
+			"Чем сложнее задача, тем интереснее решение",
+			"Индивидуальный подход к каждому проект",		
+			"Наслаждаемся созидая"
+		].reverse();
+
+		$('#msg').hide();
+		nextMsg(0);
+	</script>
   </body>
 </html>

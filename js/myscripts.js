@@ -1,17 +1,17 @@
-/* // каруселька отзывов
+// каруселька отзывов
 jQuery(document).ready(function() {
-	$(".owl-reviews").owlCarousel();
+	$("#owl-reviews").owlCarousel();
 });
- // каруселька партнеров	
+/* // каруселька партнеров	
 jQuery(document).ready(function() {		 
-	$(".owl-partners").owlCarousel({	  
+	$("#owl-partners").owlCarousel({	  
 		nav: true,
 		autoPlay: 3000, //Set AutoPlay to 3 seconds	 
 		items : 1,
 		itemsDesktop : [1199,3],
 		itemsDesktopSmall : [979,3]		 
 	});
-});  */
+}); */
 // отображение раздела в котором находится пользователь
 jQuery('body').scrollspy({ target: '.navbar-example' })
 // плавный переход по разделам	

@@ -18,6 +18,7 @@ include "dbLib.php";
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/font.css" rel="stylesheet">	
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">	
 	<link href="css/nav.css" rel="stylesheet">	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -127,8 +128,8 @@ include "dbLib.php";
   <a class="navbar-brand" href="#">ГарантСпецСтрой</a>
 </div>	
 	<div class="container">
-	<div class="rewiews">
-		<section class="vacancy">
+	<div class="rewiews ">
+		<section class="vacancy panel_all_pages">
 			<div class="row">
 				<div class="col-sm-1"></div>			
 				<div class="col-sm-11">
@@ -141,7 +142,7 @@ include "dbLib.php";
 			{ 
 				?>	
 			<div class="row" style="margin-top: 15px;">				
-				<div class="col-sm-2">
+				<div class="col-sm-2" >
 					<p class="rewiews_text__name"><?php echo $row["firstname"]?></p>
 					<p class="rewiews_text__date"><?php echo $row["date"] ?></p>
 				</div>

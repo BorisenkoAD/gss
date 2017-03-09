@@ -1,0 +1,15 @@
+body {
+/*padding-left: 200px;*/
+	/* Картинка, которая используются для splash */
+	background-image:url(../img/vacan_07.jpg);
+	/* Масштабируем картинку с сохранением пропорций */
+  	background-size:cover;
+	background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;  
+	/* Запрещаем фоновому изображению прокручиваться, т.е. делаем его неподвижным */
+		background-attachment:fixed; 
+		background-position: center center;
+	position: relative;	
+}
