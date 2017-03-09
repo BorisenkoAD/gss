@@ -120,12 +120,13 @@ width: 200px;
 .dropdown-backdrop { position: static; }
 
 .navigationText {
-	font-family: "MyriadProSemiBold" !important;
+	font-family: "MyriadProRegular" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	font-size: 24px;	 
 }
 
 .navigationText_small {
+	font-family: "MyriadProRegular" !important;	
 	font-size: 17px !important;	 
 	text-align:center !important;
 /*	font-weight: bold;*/
@@ -189,7 +190,7 @@ hr {
 	color:#000;	
 	text-align:center;
 /* 	position: relative;*/	
-	font-size: 16px;	
+	font-size: 17px;	
 }
 .vacancy_text a{
 	font-family: "MyriadProSemiBold" !important;
@@ -226,7 +227,7 @@ hr {
 	color:#000;	
 	text-align:justify;
 /* 	position: relative;*/	
-	font-size: 16px;	
+	font-size: 20px;	
 }
 .partners_image{
 	padding-top: 12px;
@@ -241,7 +242,7 @@ hr {
 	color:#000;	
 	text-align:justify;
 /* 	position: relative;*/	
-	font-size: 18px;	
+	font-size: 20px;	
 }
 /*СТРАНИЦА КОНТАКТЫ*/
 .contact {
@@ -267,7 +268,7 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px;
 	background-color: #fff;
-	font-family: "MyriadProSemiBold" !important;
+	font-family: "MyriadProRegular" !important;
 	/* text-shadow: 1px 1px 2px #000; */
 	/* Цвет текста */
 	/* text-shadow: 1px 1px 2px #000; */
@@ -286,7 +287,7 @@ hr {
 	color:#000;	
 	text-align:justify;
 /* 	position: relative;*/	
-	font-size: 14px;	
+	font-size: 16px;	
 }
 .rewiews_text__name {
 	font-family: "MyriadProSemiBold" !important;
@@ -296,7 +297,7 @@ hr {
 	color:#000;	
 	text-align:left;
 /* 	position: relative;*/	
-	font-size: 18px;	
+	font-size: 20px;	
 }
 .rewiews_text__date {
 	font-family: "MyriadProSemiBold" !important;
@@ -306,5 +307,5 @@ hr {
 	color:#000;	
 	text-align:left;
 /* 	position: relative;*/	
-	font-size: 18px;	
+	font-size: 20px;	
 }
