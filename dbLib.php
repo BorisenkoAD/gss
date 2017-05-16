@@ -1,6 +1,7 @@
 <?php
 $username = 'u1063074_arkada';
 $password = 'qGYF<HSM5-4g.O<*';
+echo "111111";
 try 
 	{
     $connection = new PDO('mysql:host=192.168.137.106;dbname=db1063074_arkadaspb', $username, $password, array(

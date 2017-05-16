@@ -1,7 +1,9 @@
 <?php
-	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/lostaspb.ru/tmp/';
+	$uploaddir = '/var/www/vhosts/22/137870/webspace/httpdocs/gsst-spb.ru/tmp/';
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+	$namefile =  basename($_FILES['userfile']['name']);
 	$mes = " ";
+	$send = false;
 
 try {
     
@@ -16,11 +18,12 @@ try {
 
     // Check $_FILES['upfile']['error'] value.
     switch ($_FILES['userfile']['error']) {
-        case UPLOAD_ERR_OK:
+        case UPLOAD_ERR_OK:	
             break;
         case UPLOAD_ERR_NO_FILE:
+			echo 'Файл не отправлен.';		
             throw new RuntimeException('Файл не отправлен.');
-        case UPLOAD_ERR_INI_SIZE:
+        case UPLOAD_ERR_INI_SIZE:	
         case UPLOAD_ERR_FORM_SIZE:
             throw new RuntimeException('Превышен размер файла.');
         default:
@@ -59,7 +62,9 @@ try {
     )) {
         throw new RuntimeException('Перемещение файла невозможно.');
     }
+		$send = true;
         throw new RuntimeException('Ваше сообщение успешно отправлено.');
+		
 
  } catch (RuntimeException $e) {
 ?>
@@ -80,41 +85,43 @@ try {
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">			
-					<h2 class="text-center"  style="color: #fff"><strong><?echo $e->getMessage();}?></strong></h2>
+					<h2 class="text-center" style="color: #000"><strong><?echo $e->getMessage();}?></strong></h2>
 <?
-//---------------------------------
-$filename = $uploadfile; // $_FILES['userfile']['name']; //Имя файла для прикрепления $uploadfile;
-$to = "info@gsst-spb.ru"; 
-$from="admin@gsst-spb.ru";
-$subject = "Прикрепленное резюме с сайта";
-$message = $_POST['message'];
-$subj = "=?utf-8?B?".base64_encode($subject)."?=";
-$boundary = uniqid('np');
-$nl = "\n";
-$file = fopen($filename, "r");
-$blob = fread($file, filesize($filename));
-fclose($file);
+if ($send) {
+	//---------------------------------
+	$filename = $uploadfile; // $_FILES['userfile']['name']; //Имя файла для прикрепления $uploadfile;
+	$to = "info@gsst-spb.ru"; 
+	$from="admin@gsst-spb.ru";
+	$subject = "Прикрепленное резюме с сайта";
+	$message = $_POST['message'];
+	$subj = "=?utf-8?B?".base64_encode($subject)."?=";
+	$boundary = uniqid('np');
+	$nl = "\n";
+	$file = fopen($filename, "r");
+	$blob = fread($file, filesize($filename));
+	fclose($file);
 
-$headers = "MIME-Version: 1.0" . $nl;
-$headers .= "From: " . $from . $nl . "Reply-To: " . $from . $nl;
-$headers .= "Content-Type: multipart/mixed;boundary=" . $boundary . $nl;
+	$headers = "MIME-Version: 1.0" . $nl;
+	$headers .= "From: " . $from . $nl . "Reply-To: " . $from . $nl;
+	$headers .= "Content-Type: multipart/mixed;boundary=" . $boundary . $nl;
 
-$msg = "This is a MIME encoded message."; 
-$msg .= $nl . $nl . "--" . $boundary . $nl;
-$msg .= "Content-type: text/html;charset=utf-8" . $nl . $nl;
-$msg .= $message;
-$msg .= $nl . $nl . "--" . $boundary . $nl;
-$msg .= "Content-Type: application/octet-stream" . $nl;
-$msg .= "Content-Transfer-Encoding: base64" . $nl;
-$msg .= "Content-Disposition: attachment; " .
- "filename=\"=?utf-8?B?".base64_encode($filename)."?=\"" . $nl . $nl;
-$msg .= chunk_split(base64_encode($blob)) . $nl;
-$msg .= $nl . $nl . "--" . $boundary . "--";
+	$msg = "This is a MIME encoded message."; 
+	$msg .= $nl . $nl . "--" . $boundary . $nl;
+	$msg .= "Content-type: text/html;charset=utf-8" . $nl . $nl;
+	$msg .= $message;
+	$msg .= $nl . $nl . "--" . $boundary . $nl;
+	$msg .= "Content-Type: application/octet-stream" . $nl;
+	$msg .= "Content-Transfer-Encoding: base64" . $nl;
+	$msg .= "Content-Disposition: attachment; " .
+	 "filename=\"=?utf-8?B?".base64_encode($filename)."?=\"" . $nl . $nl;
+	$msg .= chunk_split(base64_encode($blob)) . $nl;
+	$msg .= $nl . $nl . "--" . $boundary . "--";
 
-mail($to, $subj, $msg, $headers);
-//---------------------------------	
-	// теперь этот файл нужно переименовать желательно в дату_время отправки
-	// потом его отправить по почте админу и удалить его.
+	mail($to, $subj, $msg, $headers);
+	//---------------------------------	
+		// теперь этот файл нужно переименовать желательно в дату_время отправки
+		// потом его отправить по почте админу и удалить его.
+}
 ?>								
                 </div>
             </div>
@@ -124,7 +131,7 @@ mail($to, $subj, $msg, $headers);
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-             setTimeout('location.replace("/vacancy.html")', 3000);
+            setTimeout('location.replace("/vacancy.html")', 3000);
          </script>
 
     </body>

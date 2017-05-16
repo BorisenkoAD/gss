@@ -46,7 +46,7 @@ catch (RuntimeException $e) {
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">			
-					<h2 class="text-center" style="color: #fff"><strong><?echo $e->getMessage();}?></strong></h2>
+					<h2 class="text-center" style="color: #000"><strong><?echo $e->getMessage();}?></strong></h2>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ catch (RuntimeException $e) {
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            setTimeout('location.replace("/feedback.html")', 2300);
+            setTimeout('location.replace("/feedback.html")', 3000);
         </script>
 
     </body>
