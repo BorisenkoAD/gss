@@ -68,24 +68,55 @@ try {
 
  } catch (RuntimeException $e) {
 ?>
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-	<link href="css/normalize.css" rel="stylesheet"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-	<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>	
-    <link href="css/style.css" rel="stylesheet"/>	
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">			
-					<h2 class="text-center" style="color: #000"><strong><?echo $e->getMessage();}?></strong></h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Подключаем CSS Jasny Bootstrap -->
+    <link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/font.css" rel="stylesheet">	
+	<link href="css/style.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+	<link href="css/nav.css" rel="stylesheet">	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.png">	
+<script src='https://www.google.com/recaptcha/api.js'></script>  
+  </head>
+  <body>
+	<div class="container">
+		<section class="vacancy panel_all_pages">
+			<div class="row">
+				<div class="col-sm-1"></div>			
+				<div class="col-sm-11">
+				<p class="header_text"><?echo $e->getMessage();}?></p>
+				</div>
+			</div>
+		</section>	
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- Подключаем JavaScript Jasny Bootstrap -->
+    <script src="js/jasny-bootstrap.min.js"></script>
+        <script type="text/javascript">
+            setTimeout('location.replace("/vacancy.html")', 3000);
+        </script>
+  </body>
+</html>
 <?
 if ($send) {
 	//---------------------------------
@@ -122,17 +153,4 @@ if ($send) {
 		// теперь этот файл нужно переименовать желательно в дату_время отправки
 		// потом его отправить по почте админу и удалить его.
 }
-?>								
-                </div>
-            </div>
-        </div>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            setTimeout('location.replace("/vacancy.html")', 3000);
-         </script>
-
-    </body>
-</html>
+?>
