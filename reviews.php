@@ -54,7 +54,7 @@ catch (RuntimeException $e) {
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">			
-					<h2 class="text-center" style="color: #fff"><strong><?echo $e->getMessage();}?></strong></h2>
+					<h2 class="text-center" style="color: #000"><strong><?echo $e->getMessage();}?></strong></h2>
                 </div>
             </div>
         </div>
